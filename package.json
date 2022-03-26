@@ -1,6 +1,6 @@
 {
-  "name": "custom-block-template",
-  "version": "0.0.0",
+  "name": "package-json-viewer-block",
+  "version": "0.0.1",
   "watch": {
     "build-blocks": {
       "patterns": [
@@ -24,43 +24,32 @@
   "blocks": [
     {
       "type": "file",
-      "id": "file-block",
-      "title": "Example File Block",
-      "description": "A basic file block",
-      "entry": "/src/blocks/example-file-block/index.tsx",
-      "extensions": [
-        "*"
+      "id": "package.json-block",
+      "title": "package.json viewer [WIP]",
+      "description": "Provides more info for npm dependencies",
+      "entry": "/src/blocks/npm-deps-block/index.tsx",
+      "matches": [
+        "package.json"
       ],
-      "example_path": "https://github.com/facebook/react/blob/main/packages/react-dom/index.js"
-    },
-    {
-      "type": "folder",
-      "id": "folder-block",
-      "title": "Example Folder Block",
-      "description": "A basic folder block",
-      "entry": "/src/blocks/example-folder-block/index.tsx",
-      "extensions": [
-        "*"
-      ],
-      "example_path": "https://github.com/githubocto/flat"
+      "example_path": "https://github.com/levenleven/blocks-playground/blob/main/package.json"
     }
   ],
   "dependencies": {
-    "@codesandbox/sandpack-react": "^0.13.13",
     "@githubnext/utils": "^0.19.6",
     "@loadable/component": "^5.15.0",
     "@octokit/rest": "^18.12.0",
-    "@types/lodash.uniqueid": "^4.0.6",
+    "@primer/octicons-react": "^17.0.0",
     "git-url-parse": "^11.6.0",
     "lodash.uniqueid": "^4.0.1",
-    "parse-static-imports": "^1.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-error-boundary": "^3.1.4",
     "react-query": "^3.32.3"
   },
   "devDependencies": {
+    "@codesandbox/sandpack-react": "^0.13.13",
     "@types/git-url-parse": "^9.0.1",
+    "@types/lodash.uniqueid": "^4.0.6",
     "@types/parse-github-url": "^1.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
